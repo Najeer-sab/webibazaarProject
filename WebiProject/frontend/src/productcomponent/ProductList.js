@@ -1,20 +1,17 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-// import Navbar1 from "../navbar1";
-// import Navbar2 from "../navbar";
-// import Shopeur from "../shopeur";
-// import Category from "../category";
-// import { FeatureProduct } from "../featureProduct";
-// import LatestNews from "../latestNews";
-// import { CatProd } from "../CatProd";
-// import Themeextimg from "../Themeextimg";
-// import Scrollcards from "../scrollcards";
-// import Footer from "../footer";
-// import AllCategory from "../allCategory";
+
+import './slider.css'
+
+import { HiMiniAdjustmentsVertical } from "react-icons/hi2";
+
+import {  FaEye } from "react-icons/fa";
+import { CiShoppingBasket, CiHeart } from "react-icons/ci";
 
 const ProductList = () => {
   const [products, setproducts] = useState([]);
+
   useEffect(() => {
     const getproducts = async () => {
       try {
@@ -28,58 +25,60 @@ const ProductList = () => {
       }
     };
     getproducts();
-  }, [products]);
+  }, []);
 
   console.log(products);
+ 
 
   return (
     <>
-      {/* <Navbar1 />
-      <Shopeur />
-      <Navbar2 />
-      <AllCategory />
-      <Category /> */}
-      
+          <div className='container'>
+                
+                <div className="row">
 
-      <div className="container mt-4 ">
-        <h2>LATEST PRODUCT </h2>
-        <div className="row  mt-3 mb-3">
-          {products.map((value, index) => (
-            <div className="col-lg-3 " key={index}>
-              <div className="card  mb-3   border-0">
-                <Link to={`products/${value._id}`}>
-                  <img
-                    src="/images/laptop/27-300x298.jpg"
-                    className=""
-                    alt="gggg"
-                   
-                  />
-                  <div className="cord-body">
-                    <h3 className="cord-title text-center">
-                      {value.productName}
-                    </h3>
-                  </div>
-                  <p className="cord-text text-center">
-                    {value.price}00 rupees
-                  </p>
-                  <p className="cord-text text-center text-truncate  ">
-                    {value.discription}
-                  </p>
-                </Link>
-              </div>
-            </div>
-          ))}
+                    {products.map((item, index) => (
+
+
+                        <div key={index} className='col-sm-3 col-lg-3 my-3 fs-6'>
+                            <div className='card' style={{ margin: "3px" }}>
+
+                                <Link to={`products/${item._id}`} style={{textDecoration:"none"}}>
+                                    <img src={item.imageURL} alt={item.id} className='images' />
+                                    <div className='card-title' style={{ color: "black", textDecoration: "none" }}>
+                                        <div className='card-body'>
+                                            <h4 class="card-text text-truncate" style={{ color: "black", textDecoration: "none" }}>{item.productName}</h4>
+                                            <div >
+                                                <p style={{ color: "black", textDecoration: "none" }}>price: $ {item.price}.00</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </Link>
+                                <div className="icons-container ">
+                                    <span className="icons border text-center rounded  " style={{width:"40px",height:"40px"}}><a className='fs-4 icon-a' href='/'><CiShoppingBasket /></a></span>
+                                    <span className="icons border text-center rounded  " style={{width:"40px",height:"40px"}}><a className='fs-4 icon-a'href='/'><CiHeart /></a></span>
+                                    <span className="icons border text-center rounded  " style={{width:"40px",height:"40px"}}><a className='fs-4 icon-a'href='/'><HiMiniAdjustmentsVertical /></a></span>
+                                    <span className="icons border text-center rounded  " style={{width:"40px",height:"40px"}}><a className='fs-4 icon-a'href='/'><FaEye /></a></span>
+
+                                   
+                                </div>
+                            </div>
+
+                        </div>
+
+                    ))}
+
+               
+
+                 
+                </div>
+         
         </div>
-      </div>
 
-      {/* <FeatureProduct />
-      <CatProd />
-
-      <LatestNews />
-      <Themeextimg />
-      <Scrollcards />
-      <Footer /> */}
     </>
   );
 };
 export default ProductList;
+
+
+

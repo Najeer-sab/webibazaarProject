@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "proxcy": "http://localhost:3009/",
   "private": true,
-    "dependencies": {
+  "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@fontsource/roboto": "^5.0.8",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@mui/icons-material": "^5.15.3",
     "@mui/material": "^5.15.3",
     "@testing-library/jest-dom": "^5.17.0",
@@ -25,8 +27,10 @@
     "react-icons": "^4.12.0",
     "react-router-dom": "^6.21.1",
     "react-scripts": "5.0.1",
+    "react-slick": "^0.29.0",
     "react-swipeable-views-core": "^0.14.0",
     "react-swipeable-views-react-18-fix": "^0.14.1",
+    "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

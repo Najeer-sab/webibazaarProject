@@ -191,6 +191,7 @@ function AllCategory() {
                   className="d-block w-100"
                   src="/images/allCategory.jpg"
                   alt="First slide"
+                  style={{height:"450px"}}
                 />
                 <Carousel.Caption style={{ color: "white", marginLeft: "40%" }}>
                   <h6>Spring-SUMMER 2022</h6>
@@ -207,6 +208,7 @@ function AllCategory() {
                   className="d-block w-100"
                   src="/images/allCategory.jpg"
                   alt="Second slide"
+                  style={{height:"450px"}}
                 />
                 <Carousel.Caption style={{ color: "white", marginLeft: "43%" }}>
                   <h6>Spring-SUMMER 2022</h6>
@@ -223,6 +225,7 @@ function AllCategory() {
                   className="d-block w-100"
                   src="/images/allCategory.jpg"
                   alt="Third slide"
+                  style={{height:"450px"}}
                 />
                 <Carousel.Caption style={{ color: "white", marginLeft: "43%" }}>
                   <h6>Spring-SUMMER 2022</h6>

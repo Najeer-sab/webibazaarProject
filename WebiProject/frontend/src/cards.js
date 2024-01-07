@@ -9,25 +9,41 @@ function Cards() {
     <Container className="mt-3">
       <Row className="mb-5 mt-3">
         <Col>
-          <Card style={{ width: "50",position:"relative" }} className="">
-            <div style={{ width: "50",position:"absolute",top:"50px",left:"50px" }}>
-              <h5>
-              New Smart Watch
-              </h5>
+          <Card style={{ width: "50", position: "relative" }} className="">
+            <div
+              style={{
+                width: "50",
+                position: "absolute",
+                top: "50px",
+                left: "50px",
+              }}
+            >
+              <h5>New Smart Watch</h5>
               <p>GET UP TO 50% OFF</p>
-              <a href="/" className="" style={{textDecoration:"none",}}>Shop Now<FaLongArrowAltRight /></a>
+              <a href="/" className="" style={{ textDecoration: "none" }}>
+                Shop Now
+                <FaLongArrowAltRight />
+              </a>
             </div>
             <Image src="/images/2.jpg" fluid />
           </Card>
         </Col>
         <Col>
-          <Card style={{ width: "50",position:"relative" }}>
-          <div style={{ width: "50",position:"absolute",top:"50px",left:"50px" }}>
-              <h5>
-              New Mobile
-              </h5>
+          <Card style={{ width: "50", position: "relative" }}>
+            <div
+              style={{
+                width: "50",
+                position: "absolute",
+                top: "50px",
+                left: "50px",
+              }}
+            >
+              <h5>New Mobile</h5>
               <p>GET UP TO 50% OFF</p>
-              <a href="/" className="" style={{textDecoration:"none",}}>Shop Now<FaLongArrowAltRight /></a>
+              <a href="/" className="" style={{ textDecoration: "none" }}>
+                Shop Now
+                <FaLongArrowAltRight />
+              </a>
             </div>
             <Image src="/images/1.jpg" fluid />
           </Card>

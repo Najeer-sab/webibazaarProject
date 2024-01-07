@@ -5,6 +5,8 @@ import axios from "axios";
 
 const Category = () => {
   const [catogary, setCatogary] = useState([]);
+  // const [currentIndex, setCurrentIndex] = useState(10);
+
   useEffect(() => {
     const fetctchCat = async () => {
       try {

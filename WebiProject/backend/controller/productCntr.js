@@ -2,8 +2,8 @@ const product = require("../model/product");
 
 //product
 const createProduct = async (req, res) => {
-  const { productid, productName, discription, price } = req.fields;
-  if (!(productid && productName && discription && price)) {
+  const { productid, productName, discription, price,imageURL } = req.fields;
+  if (!(productid && productName && discription && price && imageURL)) {
     res.status(400).send("provide the all fields ");
   } else {
     const data = await product.create({
@@ -11,6 +11,8 @@ const createProduct = async (req, res) => {
       productName: productName,
       discription: discription,
       price: price,
+      imageURL: imageURL,
+
     });
     res.status(200).send("data is created for product");
   }

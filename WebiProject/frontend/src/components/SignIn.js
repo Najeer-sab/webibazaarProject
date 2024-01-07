@@ -8,9 +8,8 @@ function Signin() {
   const [password, setPassword] = useState("");
 
   const handleSubmit = () => {
-    console.log(email, password);
     axios
-      .post("http://localhost:3002/api/newuser/signin", {
+      .post("http://localhost:3009/api/newuser/signin", {
         email: email,
         password: password,
       })

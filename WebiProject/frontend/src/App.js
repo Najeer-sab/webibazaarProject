@@ -9,6 +9,13 @@ import NewSubmit from './components/NewSubmit';
 import ProductDisplay from "./productcomponent/SingleProduct";
 import  ProductList  from "./productcomponent/ProductList";
 import Cart from './cart/Cart';
+import Aboutus from './AboutUs/aboutus'
+import Contact from './contact/contact';
+import Pageerror from './errorPage/errorPage';
+import Services from './serv/service';
+import Faq from './faqs/faqs';
+import Features from './features/features';
+
 // import Navbar1 from "./navbar1";
 // import Navbar2 from "./navbar";
 // import Shopeur from "./shopeur";
@@ -36,6 +43,12 @@ function App() {
           <Route path="/products/:productId"element={<ProductDisplay/>} />
           <Route path="/cart" element={<Cart/>} />
           <Route path="/" element={<Home/>} />
+          <Route path='/aboutus' element={<Aboutus />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/errorPage' element={<Pageerror />} />
+          <Route path='/services' element={<Services/>} />
+          <Route path='/faqs' element={<Faq />} />
+          <Route path='/features' element={<Features />} />
 
 
         

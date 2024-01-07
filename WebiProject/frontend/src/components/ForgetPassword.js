@@ -9,7 +9,7 @@ function ForgetPassword() {
   const handleSubmit = () => {
     console.log(email);
     axios
-      .post("http://localhost:3002/api/newuser/send-otp", {
+      .post("http://localhost:3009/api/newuser/sendotp", {
         email: email,
       })
       .then((res) => {

@@ -3,13 +3,18 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 function Signup() {
+  const [FirstName, setFirstName] = useState("");
+  const [LastName, setLastName] = useState("");
+  const [PhoneNumber, setPhoneNumber] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = () => {
-    console.log(email, password);
     axios
-      .post("http://localhost:3002/api/newuser/signup", {
+      .post("http://localhost:3009/api/newuser/signup", {
+        FirstName: FirstName,
+        LastName: LastName,
+        PhoneNumber: PhoneNumber,
         email: email,
         password: password,
       })
@@ -31,23 +36,48 @@ function Signup() {
       <div className="container d-flex justify-content-center vh-100 align-items-center">
         <div className="row">
           <div className="col">
-            <div className="card" style={{width:"400px"}}>
+            <div className="card" style={{ width: "400px" }}>
               <div className="card-body">
                 <div className="card-title text-center">
                   <h1 className="mb-4 mt-2"> SIGNUP </h1>
                 </div>
                 <div className="">
+                  FirstName
+                  <input
+                    onChange={(e) => {
+                      setFirstName(e.target.value);
+                    }}
+                    value={FirstName}
+                    className="form-control mb-4"
+                    type="text"
+                  />
+                  LastName
+                  <input
+                    onChange={(e) => {
+                      setLastName(e.target.value);
+                    }}
+                    value={LastName}
+                    className="form-control mb-4"
+                    type="text"
+                  />
+                  PhoneNumber
+                  <input
+                    onChange={(e) => {
+                      setPhoneNumber(e.target.value);
+                    }}
+                    value={PhoneNumber}
+                    className="form-control mb-4"
+                    type="number"
+                  />
                   Email
                   <input
                     onChange={(e) => {
                       setEmail(e.target.value);
-                     
                     }}
                     value={email}
                     className="form-control mb-4"
                     type="email"
                   />
-           
                   Password
                   <input
                     onChange={(e) => {
@@ -57,17 +87,18 @@ function Signup() {
                     className="form-control mb-4"
                     type="password"
                   />
-            
-                 <div className="d-grid">
-                 <button onClick={handleSubmit} className="btn btn-primary btn-lg mb-4">
-                    SUBMIT
-                  </button>
-                 </div>
-                <div className=" text-center mt-4">
-
-            
-                 <span className=" text-muted">Already Have Account?</span>   <Link to={"/SignIn"} >    SIGN IN  </Link>
-                 </div>
+                  <div className="d-grid">
+                    <button
+                      onClick={handleSubmit}
+                      className="btn btn-primary btn-lg mb-4"
+                    >
+                      SUBMIT
+                    </button>
+                  </div>
+                  <div className=" text-center mt-4">
+                    <span className=" text-muted">Already Have Account?</span>{" "}
+                    <Link to={"/SignIn"}> SIGN IN </Link>
+                  </div>
                 </div>
               </div>
             </div>
