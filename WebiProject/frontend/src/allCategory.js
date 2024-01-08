@@ -110,17 +110,15 @@ function AllCategory() {
                 >
                   <ListItemButton>
                     {" "}
-                    <ListItemText primary="Sent mail" />{" "}
+                    <ListItemText primary="Accessories" />{" "}
                   </ListItemButton>
                 </HtmlTooltip>
 
                 <ListItemButton>
-                  <ListItemText primary="Drafts" />
+                  <ListItemText primary="Hydraulic" />
                 </ListItemButton>
 
-                <ListItemButton>
-                  <ListItemText primary="Drafts" />
-                </ListItemButton>
+              
                 <HtmlTooltip
                   placement="right-start"
                   className="bg-white"
@@ -145,11 +143,11 @@ function AllCategory() {
                   </ListItemButton>
                 </HtmlTooltip>
                 <ListItemButton>
-                  <ListItemText primary="Drafts" />
+                  <ListItemText primary="Cryotrnics" />
                 </ListItemButton>
 
                 <ListItemButton>
-                  <ListItemText primary="Drafts" />
+                  <ListItemText primary="Induction" />
                 </ListItemButton>
 
                 <HtmlTooltip
@@ -177,7 +175,10 @@ function AllCategory() {
                 </HtmlTooltip>
 
                 <ListItemButton>
-                  <ListItemText primary="Drafts" />
+                  <ListItemText primary="Circuits" />
+                </ListItemButton>
+                <ListItemButton>
+                  <ListItemText primary="Handwatch" />
                 </ListItemButton>
               </List>
             </div>

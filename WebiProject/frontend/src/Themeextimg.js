@@ -9,7 +9,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 
 export const Themeextimg = () => {
   return (
-    <Container className="mt-4 mb-4">
+    <Container className="mt-4 mb-4" >
       <Row className="row">
        
         
